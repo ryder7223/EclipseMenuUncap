@@ -31,7 +31,7 @@ namespace eclipse::hacks::Player {
 
             tab->addToggle("player.customwavetrail")->handleKeybinds()->setDescription()
                ->addOptions([](auto options) {
-                   options->addInputFloat("player.customwavetrail.scale", 0.f, 10.f, "%.2f");
+                   options->addInputFloat("player.customwavetrail.scale", 0.f, 999999.f, "%.2f");
                    options->addToggle("player.customwavetrail.rainbow")->addOptions([](auto opt) {
                        opt->addInputFloat("player.customwavetrail.speed", 0.f, FLT_MAX, "%.2f");
                        opt->addInputFloat("player.customwavetrail.saturation", 0.f, 100.f, "%.2f");
@@ -41,8 +41,8 @@ namespace eclipse::hacks::Player {
                        opt->addColorComponent("player.customwavetrail.color");
                    });
                    options->addToggle("player.customwavetrail.outline")->addOptions([](auto opt) {
-                       opt->addInputFloat("player.customwavetrail.outline.stroke", 0.f, 10.f, "%.2f");
-                       opt->addInputInt("player.customwavetrail.outline.blur", 0, 32);
+                       opt->addInputFloat("player.customwavetrail.outline.stroke", 0.f, 999999.f, "%.2f");
+                       opt->addInputInt("player.customwavetrail.outline.blur", 0, 999999);
                        opt->addColorComponent("player.customwavetrail.outline.color");
                    });
                });
