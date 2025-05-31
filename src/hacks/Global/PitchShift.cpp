@@ -36,7 +36,7 @@ namespace eclipse::hacks::Global {
             config::setIfEmpty("global.pitchshift.toggle", false);
             config::setIfEmpty("global.pitchshift", 1.f);
 
-            tab->addFloatToggle("global.pitchshift", 0.00001f, 999999999, "%.2f")
+            tab->addFloatToggle("global.pitchshift", 0.00001f, 999999999f, "%.2f")
                ->valueCallback(setPitch)
                ->handleKeybinds()
                ->setDescription()
