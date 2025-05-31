@@ -431,7 +431,7 @@ namespace eclipse::hacks::Labels {
                           ->setDescription();
                    options->addToggle("labels.cheat-indicator.only-cheating")
                           ->setDescription();
-                   options->addInputFloat("labels.cheat-indicator.scale", 0.1f, 2.f, "%.1f")
+                   options->addInputFloat("labels.cheat-indicator.scale", 0.000000001f, FLT_MAX, "%.1f")
                           ->setDescription()
                           ->callback([](float) { updateLabels(); });
                    options->addInputFloat("labels.cheat-indicator.opacity", 0.f, 1.f, "%.2f")
