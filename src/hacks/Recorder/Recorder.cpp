@@ -204,9 +204,9 @@ namespace eclipse::hacks::Recorder {
 
             int codecIdx = static_cast<int>(std::distance(m_codecs.begin(), std::ranges::find(m_codecs, "libx264")));
 
-            tab->addInputFloat("recorder.framerate", "recorder.fps", 1.f, FLT_MAX, "%.0f FPS");
-            tab->addInputFloat("recorder.endscreen-duration", "recorder.endscreen", 0.f, FLT_MAX, "%.2fs.");
-            tab->addInputFloat("recorder.bitrate", 1.f, FLT_MAX, "%.0fmbps");
+            tab->addInputFloat("recorder.framerate", "recorder.fps", 1.f, 360.f, "%.0f FPS");
+            tab->addInputFloat("recorder.endscreen-duration", "recorder.endscreen", 0.f, 30.f, "%.2fs.");
+            tab->addInputFloat("recorder.bitrate", 1.f, 1000.f, "%.0fmbps");
             tab->addInputInt("recorder.res-x", "recorder.resolution.x", 1, 15360);
             tab->addInputInt("recorder.res-y", "recorder.resolution.y", 1, 8640);
             tab->addToggle("recorder.hide-preview")->setDescription();
