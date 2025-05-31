@@ -13,7 +13,7 @@ namespace eclipse::hacks::Global {
             config::setIfEmpty("global.transitionspeed.toggle", false);
             config::setIfEmpty("global.transitionspeed", 0.5f);
 
-            tab->addFloatToggle("global.transitionspeed", 0.01f, FLT_MAX, "%.2f")->setDescription()->handleKeybinds();
+            tab->addFloatToggle("global.transitionspeed", 0.01f, 999999999.f, "%.2f")->setDescription()->handleKeybinds();
         }
 
         [[nodiscard]] const char* getId() const override { return "Transition Speed"; }
