@@ -18,7 +18,7 @@ namespace eclipse::hacks::Global {
             tab->addToggle("level.accuratepercentage")->setDescription()->handleKeybinds()
                ->addOptions([](std::shared_ptr<gui::MenuTab> options) {
                    options->addToggle("level.accuratepercentage.normal_mode");
-                   options->addInputInt("level.accuratepercentage.amount", 0, 999999);
+                   options->addInputInt("level.accuratepercentage.amount", 0, 9999999);
                    options->addToggle("level.accuratepercentage.bugfix");
                    options->addToggle("level.accuratepercentage.show_minutes");
                });
