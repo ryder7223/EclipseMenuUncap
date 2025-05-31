@@ -40,7 +40,7 @@ namespace eclipse::hacks::Player {
                    options->addKeybind("player.framestepper.step_key", "player.framestepper.step_key")
                           ->setDefaultKey(keybinds::Keys::C);
                    options->addToggle("player.framestepper.hold");
-                   options->addInputFloat("player.framestepper.hold_delay", 0.0f, FLT_MAX, "%.2f");
+                   options->addInputFloat("player.framestepper.hold_delay", 0.0f, 999999999.f, "%.2f");
                    options->addInputInt("player.framestepper.hold_speed", 0);
                });
         }
