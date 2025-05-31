@@ -5,7 +5,7 @@
 
 #ifdef GEODE_IS_WINDOWS
 constexpr float MIN_FPS = 0.f;
-constexpr float MAX_FPS = 999999999f;
+constexpr float MAX_FPS = 999999999.f;
 
 namespace eclipse::hacks::Global {
     class $hack(FPSBypass) {
