@@ -31,7 +31,7 @@ namespace eclipse::hacks::Player {
 
             tab->addToggle("player.customwavetrail")->handleKeybinds()->setDescription()
                ->addOptions([](auto options) {
-                   options->addInputFloat("player.customwavetrail.scale", 0.f, 999999.f, "%.2f");
+                   options->addInputFloat("player.customwavetrail.scale", 0.000000001f, FLT_MAX, "%.2f");
                    options->addToggle("player.customwavetrail.rainbow")->addOptions([](auto opt) {
                        opt->addInputFloat("player.customwavetrail.speed", 0.f, FLT_MAX, "%.2f");
                        opt->addInputFloat("player.customwavetrail.saturation", 0.f, 100.f, "%.2f");
