@@ -15,7 +15,7 @@ namespace eclipse::hacks::Global {
             config::set("global.speedhack.toggle", false);
             config::setIfEmpty("global.speedhack", 1.f);
 
-            tab->addFloatToggle("global.speedhack", 0.0000001f, FLT_MAX, "%.4f")
+            tab->addFloatToggle("global.speedhack", 0.0000001f, 999999999, "%.4f")
                ->setDescription()
                ->handleKeybinds();
         }
