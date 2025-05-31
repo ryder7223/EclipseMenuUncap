@@ -20,8 +20,8 @@ namespace eclipse::hacks::Player {
                ->addOptions([](std::shared_ptr<gui::MenuTab> options) {
                    options->addToggle("player.autoclick.p1");
                    options->addToggle("player.autoclick.p2");
-                   options->addInputInt("player.autoclick.intervalhold", 1, 1000);
-                   options->addInputInt("player.autoclick.intervalrelease", 1, 1000);
+                   options->addInputInt("player.autoclick.intervalhold", 1, 999999999);
+                   options->addInputInt("player.autoclick.intervalrelease", 1, 999999999);
                });
         }
 
