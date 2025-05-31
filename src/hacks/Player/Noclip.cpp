@@ -30,8 +30,8 @@ namespace eclipse::hacks::Player {
                ->addOptions([](std::shared_ptr<gui::MenuTab> options) {
                    options->addToggle("player.noclip.p1");
                    options->addToggle("player.noclip.p2");
-                   options->addFloatToggle("player.noclip.acclimit", 0.000000001f, 100.f, "%.2f")->handleKeybinds();
-                   options->addIntToggle("player.noclip.deathlimit", 1, )->handleKeybinds();
+                   options->addFloatToggle("player.noclip.acclimit", 0.000000001f, FLT_MAX, "%.2f")->handleKeybinds();
+                   options->addIntToggle("player.noclip.deathlimit", 1, 999999999)->handleKeybinds();
                    options->addToggle("player.noclip.tint");
                    options->addColorComponent("player.noclip.color");
                    options->addInputFloat("player.noclip.opacity", 0.f, 100.f, "%.0f%");
