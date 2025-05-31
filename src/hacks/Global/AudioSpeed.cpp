@@ -43,7 +43,7 @@ namespace eclipse::hacks::Global {
             config::setIfEmpty("global.audiospeed.toggle", false);
             config::setIfEmpty("global.audiospeed", 1.f);
 
-            tab->addFloatToggle("global.audiospeed", 0.0000001f, FLT_MAX, "%.4f")->handleKeybinds();
+            tab->addFloatToggle("global.audiospeed", 0.0000001f, 999999999f, "%.4f")->handleKeybinds();
             tab->addToggle("global.audiospeed.sync")->handleKeybinds()->setDescription();
         }
 
