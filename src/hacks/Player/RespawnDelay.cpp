@@ -14,7 +14,7 @@ namespace eclipse::hacks::Player {
             config::setIfEmpty("player.respawndelay.toggle", false);
             config::setIfEmpty("player.respawndelay", 1.f);
 
-            tab->addFloatToggle("player.respawndelay", 0.f, 120.f, "%.2f s.")->handleKeybinds();
+            tab->addFloatToggle("player.respawndelay", 0.f, 999999999.f, "%.2f s.")->handleKeybinds();
         }
 
         [[nodiscard]] int32_t getPriority() const override { return 1; }
