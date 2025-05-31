@@ -27,7 +27,7 @@ namespace eclipse::hacks::Global {
 
         void init() override {
             auto tab = gui::MenuTab::find("tab.global");
-            tab->addFloatToggle("global.fpsbypass", "global.fpsbypass", MIN_FPS, MAX_FPS, "%.2f FPS")
+            tab->addFloatToggle("global.fpsbypass", "global.fpsbypass", 0.1f, FLT_MAX, "%.2f FPS")
                ->handleKeybinds()
                ->toggleCallback([] { updateRefreshRate(); })
                ->valueCallback([](float) { updateRefreshRate(); });
