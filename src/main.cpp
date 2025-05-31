@@ -172,7 +172,7 @@ $on_mod(Loaded) {
                 ThemeManager::get()->setUIScale(config::getTemp<float>("uiScale", 1.f));
             });
         }
-        tab->addInputFloat("interface.ui-scale", "uiScale", 0.75f, 2.f, "x%.3f")
+        tab->addInputFloat("interface.ui-scale", "uiScale", 0.3f, 999999999f, "x%.3f")
            ->callback([](float value) {
                ThemeManager::get()->setUIScale(value);
            })->disableSaving()->setFlags(ComponentFlags::DisableCocos);
@@ -184,7 +184,7 @@ $on_mod(Loaded) {
         fontCombo->callback([](int value) {
             ThemeManager::get()->setSelectedFont(value);
         })->disableSaving()->setFlags(ComponentFlags::DisableCocos);
-        tab->addInputFloat("interface.font-size", "fontSize", 10.f, 64.f)
+        tab->addInputFloat("interface.font-size", "fontSize", 1.f, 999999999f)
            ->callback([](float value) {
                if (value >= 10.f) ThemeManager::get()->setFontSize(value);
            })->disableSaving()->setFlags(ComponentFlags::DisableCocos);
@@ -206,7 +206,7 @@ $on_mod(Loaded) {
         auto blurToggle = tab->addToggle("interface.enable-blur", "blurEnabled")
                              ->callback([](bool value) { ThemeManager::get()->setBlurEnabled(value); });
         blurToggle->addOptions([](auto opt) {
-            opt->addInputFloat("interface.blur-speed", "blurSpeed", 0.f, 10.f, "%.3f s")
+            opt->addInputFloat("interface.blur-speed", "blurSpeed", 0.f, 999999999f, "%.3f s")
                ->callback([](float value) { ThemeManager::get()->setBlurSpeed(value); })
                ->disableSaving();
         });
@@ -219,7 +219,7 @@ $on_mod(Loaded) {
         config::setIfEmpty("menu.animationEasingMode", animation::EasingMode::EaseInOut);
         auto animateToggle = tab->addToggle("menu.animateWindows")->setDescription();
         animateToggle->addOptions([](auto opt) {
-                opt->addInputFloat("menu.animationDuration", 0.f, 10.f, "%.3f s");
+                opt->addInputFloat("menu.animationDuration", 0.f, 999999999f, "%.3f s");
                 opt->addCombo("menu.animationEasingType", {
                     i18n::get_("menu.animationEasingType.0"),
                     i18n::get_("menu.animationEasingType.1"),
@@ -253,7 +253,7 @@ $on_mod(Loaded) {
         tab->addInputFloat("float-btn.min-opacity", 0.1f, 1.f)->setFlags(ComponentFlags::DisableImGui);
         tab->addToggle("float-btn.show-in-level")->setFlags(ComponentFlags::DisableImGui);
         tab->addToggle("float-btn.show-in-editor")->setFlags(ComponentFlags::DisableImGui);
-        tab->addInputFloat("float-btn.scale", 0.15f, 1.f)->setFlags(ComponentFlags::DisableImGui);
+        tab->addInputFloat("float-btn.scale", 0.15f, 999999999f)->setFlags(ComponentFlags::DisableImGui);
 
     #endif
 
