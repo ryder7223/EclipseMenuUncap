@@ -11,7 +11,7 @@
 #include <sinaps.hpp>
 
 constexpr float MIN_TPS = 0.f;
-constexpr float MAX_TPS = 100000.f;
+constexpr float MAX_TPS = FLT_MAX;
 
 #ifdef GEODE_IS_MACOS
 #define REQUIRE_PATCH

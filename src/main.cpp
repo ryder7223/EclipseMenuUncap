@@ -172,7 +172,7 @@ $on_mod(Loaded) {
                 ThemeManager::get()->setUIScale(config::getTemp<float>("uiScale", 1.f));
             });
         }
-        tab->addInputFloat("interface.ui-scale", "uiScale", 0.75f, 999999999.f, "x%.3f")
+        tab->addInputFloat("interface.ui-scale", "uiScale", 0.3f, 999999999.f, "x%.3f")
            ->callback([](float value) {
                ThemeManager::get()->setUIScale(value);
            })->disableSaving()->setFlags(ComponentFlags::DisableCocos);
@@ -254,7 +254,6 @@ $on_mod(Loaded) {
         tab->addToggle("float-btn.show-in-level")->setFlags(ComponentFlags::DisableImGui);
         tab->addToggle("float-btn.show-in-editor")->setFlags(ComponentFlags::DisableImGui);
         tab->addInputFloat("float-btn.scale", 0.000000001f, 999999999.f)->setFlags(ComponentFlags::DisableImGui);
-
     #endif
 
         auto accentColor = tab->addColorComponent("interface.accent-color", "accent", true);

@@ -17,7 +17,7 @@ namespace eclipse::hacks::Level {
 
             tab->addToggle("level.pausecount")->handleKeybinds()->setDescription()
                ->addOptions([](std::shared_ptr<gui::MenuTab> options) {
-                   options->addInputFloat("level.pausecount.time", 0.1f, 15.f, "%.2fs");
+                   options->addInputFloat("level.pausecount.time", 0.0001f, 999999.f, "%.2fs");
                });
         }
 

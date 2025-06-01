@@ -4,8 +4,8 @@
 #include <modules/hack/hack.hpp>
 
 #ifdef GEODE_IS_WINDOWS
-constexpr float MIN_FPS = 1.f;
-constexpr float MAX_FPS = 100000.f;
+constexpr float MIN_FPS = 0.f;
+constexpr float MAX_FPS = 999999999.f;
 
 namespace eclipse::hacks::Global {
     class $hack(FPSBypass) {
@@ -27,7 +27,7 @@ namespace eclipse::hacks::Global {
 
         void init() override {
             auto tab = gui::MenuTab::find("tab.global");
-            tab->addFloatToggle("global.fpsbypass", "global.fpsbypass", MIN_FPS, MAX_FPS, "%.2f FPS")
+            tab->addFloatToggle("global.fpsbypass", "global.fpsbypass", 0.1f, FLT_MAX, "%.2f FPS")
                ->handleKeybinds()
                ->toggleCallback([] { updateRefreshRate(); })
                ->valueCallback([](float) { updateRefreshRate(); });

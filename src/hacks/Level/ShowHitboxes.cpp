@@ -82,9 +82,9 @@ namespace eclipse::hacks::Level {
                     optionsColor->addColorComponent("level.showhitboxes.player_color_inner");
                     optionsColor->addColorComponent("level.showhitboxes.player_color_rotated");
                 });
-                options->addInputFloat("level.showhitboxes.bordersize", 0.01f, 10.f, "%.2f");
-                options->addFloatToggle("level.showhitboxes.fillalpha", 0.f, 1.f);
-                options->addFloatToggle("level.showhitboxes.traillength", 1.f, 2000.f, "%.0f");
+                options->addInputFloat("level.showhitboxes.bordersize", 0.01f, FLT_MAX, "%.2f");
+                options->addFloatToggle("level.showhitboxes.fillalpha", 0.f, FLT_MAX);
+                options->addFloatToggle("level.showhitboxes.traillength", 1.f, FLT_MAX, "%.0f");
             });
         }
 
