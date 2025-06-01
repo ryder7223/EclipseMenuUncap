@@ -253,8 +253,7 @@ $on_mod(Loaded) {
         tab->addInputFloat("float-btn.min-opacity", 0.1f, 1.f)->setFlags(ComponentFlags::DisableImGui);
         tab->addToggle("float-btn.show-in-level")->setFlags(ComponentFlags::DisableImGui);
         tab->addToggle("float-btn.show-in-editor")->setFlags(ComponentFlags::DisableImGui);
-        tab->addInputFloat("float-btn.scale", 0.15f, 999999999.f)->setFlags(ComponentFlags::DisableImGui);
-
+        tab->addInputFloat("float-btn.scale", 0.000000001f, 999999999.f)->setFlags(ComponentFlags::DisableImGui);
     #endif
 
         auto accentColor = tab->addColorComponent("interface.accent-color", "accent", true);

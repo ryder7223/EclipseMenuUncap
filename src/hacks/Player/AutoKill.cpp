@@ -20,7 +20,7 @@ namespace eclipse::hacks::Player {
                ->addOptions([](std::shared_ptr<gui::MenuTab> options) {
                    options->addFloatToggle("player.autokill.percentage", 0.f, 100.f, "%.2f%%")
                           ->handleKeybinds()->setDescription();
-                   options->addFloatToggle("player.autokill.time", 0.f, FLT_MAX, "%.2f s.")
+                   options->addFloatToggle("player.autokill.time", 0.f, 999999999.f, "%.2f s.")
                           ->handleKeybinds()->setDescription();
                });
         }
